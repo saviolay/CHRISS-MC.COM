@@ -1,0 +1,162 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Mwili mzima wa tovuti */
+body {
+    background-color: white;
+    background-image: url(log3.webp);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    height: 100vh;
+    margin: 0;
+    text-align: center;
+    font-family: Arial, Helvetica, sans-serif;
+    padding: 40px;
+}
+    
+
+/* Header ya nembo */
+.logo-header {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.logo {
+    width: 150px;
+    height: auto;
+}
+
+/* Utafutaji */
+section h1 {
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+
+#searchinput {
+    width: 100%;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    margin-bottom: 30px;
+}
+
+/* Menyu ya upande wa kulia */
+aside ul {
+    list-style: none;
+    padding: 10px;
+    background-color: #1f1f1f;
+    border-radius: 10px;
+}
+
+aside ul li {
+    margin-bottom: 10px;
+}
+
+aside ul li a {
+    color: #fff;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+aside ul li a:hover {
+    color: #1db954; /* Spotify Green kwa vibe ya muziki */
+}
+
+/* Orodha ya nyimbo */
+#songlist {
+    margin-bottom: 30px;
+}
+
+.song {
+    background-color: #1e1e1e;
+    padding: 15px;
+    margin-bottom: 15px;
+    border-radius: 8px;
+}
+
+.song strong {
+    display: block;
+    margin-bottom: 10px;
+    font-size: 18px;
+}
+
+/* Sehemu ya muziki */
+.mziki {
+    background-color: #242424;
+    padding: 20px;
+    margin-bottom: 20px;
+    border-radius: 10px;
+}
+
+.mziki h2 {
+    margin-bottom: 10px;
+}
+
+audio {
+    width: 100%;
+    margin-bottom: 10px;
+}
+
+/* Buttons */
+button {
+    padding: 8px 16px;
+    background-color: #1db954;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #17a34a;
+}
+
+/* Maoni */
+#comments {
+    background-color: #1e1e1e;
+    padding: 20px;
+    border-radius: 10px;
+}
+
+#comments textarea {
+    width: 100%;
+    padding: 10px;
+    border-radius: 5px;
+    border: none;
+    resize: vertical;
+    margin-bottom: 10px;
+}
+
+/* Watengenezaji */
+.developers {
+    text-align: center;
+    padding: 20px;
+    background-color: #1c1c1c;
+    border-radius: 10px;
+    
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    aside {
+        float: none;
+        width: 100%;
+        margin-bottom: 20px;
+    }
+
+    main {
+        float: none;
+        width: 100%;
+    }
+
+    .logo {
+        width: 120px;
+    }
+}
+body{
+    ba
+}

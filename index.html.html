@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="sw">
+<head> 
+    <meta charset="UTF-8">
+    <title>CHRISS MC</title>
+    <style>
+        body { 
+             background-color: white;
+             background-image: url(log3.webp);
+             background-size: cover;
+             background-repeat: no-repeat;
+             background-position: center;
+             height: 100vh;
+             margin: 0;
+             text-align: center;
+             font-family: Arial, Helvetica, sans-serif;
+             padding: 40px;
+           
+        }
+
+        .logo {
+            width: 150px;
+            display: block;
+            margin: 0 auto;
+            padding: 20px 0;
+        }
+
+        .background-image {
+            background-image: url('logo.jpg'); /* Badilisha picha */
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-position: center;
+            min-height: 300px;
+            width: 100%;
+        }
+
+        section {
+            text-align: center;
+            margin: 20px 0;
+        }
+
+        input[type="text"] {
+            padding: 10px;
+            width: 50%;
+            margin: 10px 0;
+        }
+
+        button {
+            padding: 8px 16px;
+            background-color: #444;
+            color: white;
+            border: none;
+            cursor: pointer;
+            border-radius: 4px;
+        }
+
+        button:hover {
+            background-color: #666;
+        }
+
+        .mziki {
+            background-color: #222;
+            padding: 10px;
+            margin: 10px;
+            border-radius: 10px;
+            height: 150px;
+        }
+
+        .video-box {
+            background-color: #222;
+            padding: 10px;
+            margin: 10px;
+            border-radius: 10px;
+            width: 100%;
+        }
+
+        .video-box video {
+            width: 100%;
+            border-radius: 8px;
+        }
+
+        aside {
+            float: right;
+            width: 25%;
+        }
+
+        aside ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        aside li {
+            margin: 10px 0;
+        }
+
+        aside a {
+            color: white;
+            text-decoration: none;
+        }
+
+        main {
+            width: 70%;
+            float: left;
+        }
+
+        footer {
+            clear: both;
+            padding: 20px;
+            background-color: #222;
+            text-align: center;
+        }
+
+        /* Video mpya upande wa kulia chini ya menu */
+        .video-section {
+            margin-top: 20px;
+        }
+
+        .video-card {
+            background-color: #222;
+            padding: 10px;
+            margin-bottom: 20px;
+            border-radius: 10px;
+            color: white;
+        }
+
+        .video-card video {
+            width: 100%;
+            border-radius: 10px;
+        }
+
+        .video-card h4 {
+            margin: 10px 0 5px;
+        }
+
+        .video-card a button {
+            margin-top: 5px;
+        }
+    </style>
+</head>
+<body>
+
+    
+
+    <!-- Picha ya Background -->
+    <div class="background-image"></div>
+
+    <!-- Sehemu ya Utafutaji -->
+    <section>
+        <h1>Tafuta nyimbo hapa</h1>
+        <input type="text" id="searchinput" placeholder="Tafuta nyimbo....">
+    </section>
+
+    <!-- Orodha ya Nyimbo -->
+    <div id="songlist" style="padding: 0 20px;">
+        <div class="song" data-title="Lody Music Mahbuba">
+            <strong>Lody Music - Mahbuba</strong>
+            <audio controls>
+                <source src="Lody-Music-Mahbuba.mp3" type="audio/mpeg">
+                Kifaa chako hakiungi mkono audio tag.
+            </audio>
+        </div>
+    </div>
+
+    <!-- JavaScript kwa Utafutaji -->
+    <script>
+        const searchinput = document.getElementById('searchinput');
+        const songs = document.querySelectorAll(".song");
+
+        searchinput.addEventListener('input', function() {
+            const searchterm = this.value.toLowerCase();
+            songs.forEach(song => {
+                const title = song.getAttribute('data-title').toLowerCase();
+                if (title.includes(searchterm)) {
+                    song.style.display = '';
+                } else {
+                    song.style.display = 'none';
+                }
+            });
+        });
+    </script>
+
+    <!-- Menyu ya Kulia -->
+    <aside>
+        <ul>
+            <li><a href="contact.html">Contact</a></li>
+            <li><a href="list music.html">Audio</a></li>
+            <li><a href="#video">Video</a></li>
+            <li><a href="#nextproject">Next Project</a></li>
+            <li><a href="info.html">Information</a></li>
+        </ul>
+
+        <!-- Sehemu ya Video (Ubavuni) -->
+        <div class="video-section">
+            <div class="video-card">
+                <h4>CHRISS_MC___BIRTHDAY_YA_KADOGOO_MC___MTONI_BAR_KILAKALA___MIDUNDO_YA_USWAZI___LIVE_SHOW(360p)</h4>
+                <video controls>
+                    <source src="CHRISS_MC___BIRTHDAY_YA_KADOGOO_MC___MTONI_BAR_KILAKALA___MIDUNDO_YA_USWAZI___LIVE_SHOW(360p).mp4" type="video/mp4">
+                    Kifaa chako hakiungi mkono video tag.
+                </video>
+                <a href="CHRISS_MC___BIRTHDAY_YA_KADOGOO_MC___MTONI_BAR_KILAKALA___MIDUNDO_YA_USWAZI___LIVE_SHOW(360p).mp4" download><button>Pakua Video</button></a>
+            </div>
+
+            <div class="video-card">
+                <h4>CHRIS MC ...SHOW LIVE IN TOP TOWN UZINDUZI WA  BAR</h4>
+                <video controls>
+                    <source src="CHRIS MC ...SHOW LIVE IN TOP TOWN UZINDUZI WA  BAR.mp4" type="video/mp4">
+                    Kifaa chako hakiungi mkono video tag.
+                </video>
+                <a href="CHRIS MC ...SHOW LIVE IN TOP TOWN UZINDUZI WA  BAR.mp4" download><button>Pakua Video</button></a>
+            </div>
+        </div>
+    </aside>
+
+    <!-- Mwili wa Tovuti -->
+    <main>
+        <div class="mziki">
+            <h2>Chris mc - Sipendi tena _Dj dabo vinanda _Oficial music</h2>
+            <audio controls>
+                <source src="Chris mc - Sipendi tena _Dj dabo vinanda _Oficial music.mp3" type="audio/mpeg">
+                Kifaa chako hakiungi mkono audio tag.
+            </audio>
+            <br>
+            <a href="Chris mc - Sipendi tena _Dj dabo vinanda _Oficial music.mp3" download>
+                <button>Pakua Wimbo</button> 
+            </a>
+        </div>
+
+        <div class="mziki">
+            <h2>Lody Music - Mahbuba</h2>
+            <audio controls>
+                <source src="Lody-Music-Mahbuba.mp3" type="audio/mpeg">
+                Kifaa chako hakiungi mkono audio tag.
+            </audio>
+            <br>
+            <a href="Lody-Music-Mahbuba.mp3" download>
+                <button>Pakua Wimbo</button>
+            </a>
+        </div>
+
+        <!-- Sehemu ya Maoni -->
+        <section id="comments">
+            <h3>Acha Comment Yako:</h3>
+            <form>
+                <textarea rows="4" cols="50" placeholder="Andika maoni yako hapa..."></textarea><br>
+                <button type="submit">Tuma</button>
+            </form>
+        </section>
+
+        <!-- Watengenezaji -->
+        <footer>
+            <h4>Watengenezaji wa Website:</h4>
+            <p style="color: lightblue;">Amani Milonge & Shekh Abdulmarick</p>
+        </footer>
+    </main>
+
+</body>
+</html>
